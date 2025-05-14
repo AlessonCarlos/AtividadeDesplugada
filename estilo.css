@@ -1,0 +1,289 @@
+.header_principal {
+    background-color: #ffffff;
+    padding: 20px;
+    text-align: center;
+    border-radius: 18px;
+    border: 3px solid black;
+  }
+
+  .header_principal h1 {
+    color: #000000;
+    margin-bottom: 15px;
+  }
+
+  .container_lista {
+    display: flex;
+    justify-content: center;
+    background-color: transparent;
+    padding: 10px;
+  }
+
+  .lista {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    align-items: center;
+  }
+
+  .lista li {
+    margin: 0 15px;
+  }
+
+  .lista a {
+    text-decoration: none;
+    color: #000000;
+    font-weight: bold;
+    padding: 8px 12px;
+    border-radius: 50px;
+    border: 2px solid black;
+    transition: background-color 0.3s ease;
+  }
+
+  .lista a:hover {
+    background-color: #141414;
+    color: #fff;
+  }
+
+
+  /*fim do header*/
+
+  .intro {
+  padding: 30px;
+  background-color: #f9f9f9;
+  border: 3px solid black;
+  text-align: center;
+
+}
+
+.intro{
+    border-radius: 18px;
+}
+
+.intro h2 {
+  color: #333;
+  margin-bottom: 20px;
+  font-size: 2.2em;
+}
+
+.intro p {
+  color: #555;
+  line-height: 1.6;
+  margin-bottom: 15px;
+  font-size: 1.1em;
+}
+
+.intro p strong {
+  color: #007BFF;
+  font-weight: bold;
+}
+
+/*fim Por que os Computadores Usam Apenas 0 e 1?*/
+
+.binario {
+  
+  padding: 30px;
+  background-color: #f9f9f9;
+  border-bottom: 1px solid #eee;
+  border-radius: 18px;
+  border: 3px solid black;
+}
+
+.binario h2 {
+  color: #333;
+  margin-bottom: 20px;
+  font-size: 2.2em;
+  text-align: center;
+}
+
+.binario p {
+  color: #555;
+  line-height: 1.6;
+  margin-bottom: 15px;
+  font-size: 1.1em;
+}
+
+.binario p strong {
+  color: #007BFF;
+  font-weight: bold;
+}
+
+.binario h3 {
+  color: #444;
+  margin-top: 25px;
+  margin-bottom: 15px;
+  font-size: 1.5em;
+}
+
+.binario ul {
+  list-style-type: none;
+  padding: 0;
+  margin-bottom: 20px;
+}
+
+.binario ul li {
+  color: #666;
+  line-height: 1.4;
+  margin-bottom: 8px;
+}
+
+.binario ul li strong {
+  color: #28A745;
+  font-weight: bold;
+}
+
+/*    */
+
+.passos {
+  padding: 30px;
+  background-color: #ffffff;
+  border-radius: 18px;
+  border: 3px solid black;
+}
+
+.passos h2 {
+  color: #333;
+  margin-bottom: 20px;
+  font-size: 2em;
+  text-align: center;
+  
+}
+
+.passos ol {
+  list-style-type: decimal;
+  padding-left: 30px;
+  margin-bottom: 20px;
+}
+
+.passos ol li {
+  color: #555;
+  line-height: 1.6;
+  margin-bottom: 10px;
+  font-size: 1.1em;
+}
+
+.passos p {
+  color: #666;
+  line-height: 1.6;
+  font-size: 1em;
+}
+
+/* Estilos gerais 
+body {
+    font-family: 'Comic Sans MS', sans-serif;
+    background-color: #f4f9f9;
+    color: #333;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+h1, h2, h3 {
+    color: #4CAF50;
+    text-align: center;
+}
+
+h1 {
+    font-size: 2.5rem;
+    margin-top: 20px;
+}
+
+h2, h3 {
+    font-size: 1.8rem;
+    margin-top: 15px;
+}
+
+p {
+    font-size: 1.1rem;
+    line-height: 1.6;
+    margin: 15px auto;
+    width: 80%;
+    text-align: justify;
+}
+
+ul, ol {
+    margin-left: 20px;
+    font-size: 1.1rem;
+    line-height: 1.6;
+}
+
+ Estilos de cabeçalho 
+header {
+    background-color: #ffcc00;
+    padding: 20px;
+    text-align: center;
+    border-bottom: 5px solid #ff9900;
+}
+
+header h1 {
+    font-size: 2.5rem;
+    color: #fff;
+}
+
+
+ Seções 
+section {
+    padding: 20px;
+    margin: 20px auto;
+    background-color: #ffffff;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    width: 90%;
+    max-width: 900px;
+}
+
+ Estilos para listas 
+ul {
+    list-style-type: square;
+    color: #555;
+}
+
+ol {
+    list-style-type: decimal;
+}
+
+ Botões e links 
+a {
+    text-decoration: none;
+    color: #ff6600;
+    font-weight: bold;
+}
+
+a:hover {
+    color: #ff9933;
+}
+
+Rodapé 
+footer {
+    background-color: #ffcc00;
+    text-align: center;
+    padding: 10px;
+    font-size: 1rem;
+    color: white;
+    margin-top: 20px;
+}
+
+Layout responsivo 
+@media (max-width: 768px) {
+    body {
+        font-size: 1rem;
+    }
+
+    header h1 {
+        font-size: 2rem;
+    }
+
+    h2, h3 {
+        font-size: 1.5rem;
+    }
+
+    section {
+        width: 95%;
+        margin-top: 10px;
+    }
+
+    p {
+        font-size: 1rem;
+    }
+}
+*/

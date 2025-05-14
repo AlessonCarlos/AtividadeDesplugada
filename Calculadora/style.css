@@ -1,0 +1,134 @@
+:root {
+  --bg: linear-gradient(135deg, #fceabb, #f8b500);
+  --primary: #ffe07d;
+  --secondary: #88d8b0;
+  --accent: #ff6f69;
+  --text: #045de9;
+  --result: #ffd700;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: 'Comic Sans MS', cursive, sans-serif;
+}
+
+body {
+  background: var(--bg);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+}
+
+.container {
+  background: var(--primary);
+  border: 5px dotted var(--accent);
+  border-radius: 25px;
+  padding: 30px;
+  width: 90%;
+  max-width: 600px;
+  text-align: center;
+  box-shadow: 0 10px 20px rgba(0,0,0,0.2);
+  transition: transform 0.3s;
+}
+
+.container:hover {
+  transform: scale(1.01);
+}
+
+h1 {
+  color: var(--accent);
+  margin-bottom: 20px;
+  font-size: 2rem;
+  text-shadow: 1px 1px white;
+}
+
+.input-area {
+  margin-bottom: 25px;
+}
+
+label {
+  display: block;
+  font-size: 1.2rem;
+  margin-bottom: 10px;
+  color: var(--text);
+}
+
+input {
+  width: 65%;
+  padding: 10px;
+  border: 3px solid var(--secondary);
+  border-radius: 12px;
+  font-size: 1rem;
+  outline: none;
+  background-color: #fffefa;
+  box-shadow: inset 1px 1px 4px rgba(0,0,0,0.1);
+}
+
+button {
+  padding: 10px 16px;
+  background: var(--accent);
+  border: none;
+  border-radius: 12px;
+  font-size: 1rem;
+  color: white;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+}
+
+button:hover {
+  transform: scale(1.1);
+  background-color: #ff3b3f;
+}
+
+.steps {
+  text-align: left;
+  background: white;
+  padding: 15px;
+  border-radius: 15px;
+  max-height: 300px;
+  overflow-y: auto;
+  box-shadow: inset 0 0 10px rgba(0,0,0,0.1);
+  border: 2px dashed var(--secondary);
+  animation: fadeIn 0.5s ease;
+}
+
+.step {
+  margin-bottom: 12px;
+  padding: 10px;
+  border-left: 5px solid var(--secondary);
+  background: #fefefe;
+  border-radius: 8px;
+  animation: slideIn 0.4s ease forwards;
+  opacity: 0;
+}
+
+.step:last-child {
+  background-color: var(--result);
+  font-weight: bold;
+  border-left-color: var(--accent);
+  box-shadow: 0 0 10px var(--result);
+}
+
+@keyframes slideIn {
+  from {
+    transform: translateX(-30px);
+    opacity: 0;
+  }
+  to {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}

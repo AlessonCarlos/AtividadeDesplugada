@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Jogo da Memória Binária</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+ <!-- Tela inicial -->
+<div id="start-screen" class="screen">
+  <img src="mascote.png" alt="Mascote Binari" class="mascote">
+  
+  <div class="speech-bubble">
+    <p>👋 Oi! Eu sou o Binari! Pronto para um desafio de memória com números binários?</p>
+  </div>
+  
+  <h1>Jogo da Memória Binária 🧠</h1>
+
+  <div class="form-group">
+    <label for="player-name">Digite seu nome, aventureiro:</label>
+    <input type="text" id="player-name" placeholder="Seu nome aqui..." required>
+  </div>
+
+  <button id="start-btn" class="btn">🚀 Começar Aventura</button>
+</div>
+
+
+  <!-- Tela do jogo (inicialmente oculta) -->
+  <div id="game-screen" class="screen hidden">
+    <header>
+      <h1>Jogador: <span id="player-display"></span></h1>
+      <div id="nivel-container">
+        <label for="nivel">Nível:</label>
+      <!-- Altere apenas o select de níveis para: -->
+            <select id="nivel">
+              <option value="6">Fácil (3 pares)</option>
+              <option value="10">Médio (6 pares)</option>
+              <option value="16">Difícil (8 pares)</option>
+              <option value="20">Expert (10 pares)</option>
+            </select>
+        <button onclick="setupGame()">Reiniciar</button>
+      </div>
+      <div id="timer">Memorize: 10s</div>
+      <div id="game-timer">Tempo: 60s</div>
+      <div id="score">Pares: 0</div>
+      <div id="status"></div>
+    </header>
+
+    <main>
+      <div id="tutorial">
+        <p>📘 <strong>Como jogar:</strong></p>
+        <ul>
+          <li>Associe o número decimal com sua representação binária.</li>
+          <li>Exemplo: <strong>5</strong> combina com <strong>101</strong>.</li>
+          <li>Você terá 10 segundos para memorizar as cartas antes do início.</li>
+        </ul>
+      </div>
+
+      <div id="game-board"></div>
+    </main>
+  </div>
+
+  <!-- Tela de fim de jogo (inicialmente oculta) -->
+  <div id="end-screen" class="screen hidden">
+    <h1>Fim de Jogo!</h1>
+    <div id="final-score"></div>
+    <h2>🏆 Melhores Pontuações 🏆</h2>
+    <div id="highscores"></div>
+    <button id="restart-btn" class="btn">Jogar Novamente</button>
+  </div>
+
+  <script src="script.js"></script>
+
+  <div id="mascote-helper" class="hidden">
+  <img src="mascote.png" alt="Mascote Binari" class="mascote">
+  <div class="speech" id="mascote-speech">Você consegue! Tente achar os pares binários!</div>
+</div>
+</body>
+</html>

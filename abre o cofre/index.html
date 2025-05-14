@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Missão Binária: O Cofre do Conhecimento</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="container_horizontal">
+    <div id="tela-inicial">
+      <div>
+        <h1>🚀 A Cripta dos Códigos Perdidos 🚀</h1>
+        <p>
+          Um cofre antigo foi descoberto nos subterrâneos do Instituto de Tecnologia UNINASSAU.
+          Diz a lenda que ele guarda o segredo proibido da linguagem das máquinas—um conhecimento tão poderoso que,
+          quem o dominasse, poderia decifrar os mistérios de qualquer sistema digital.
+        </p>
+        <p>
+          Mas há um obstáculo: o cofre só se abre com um código de 4 dígitos binários, escondido em quatro enigmas.
+          Cada charada revelará um número decimal, mas para transformá-lo em binário, você precisará dominar a arte da conversão binária, método ancestral usado pelos primeiros programadores.
+        </p>
+        <p>
+          Se errar, o mecanismo do cofre travará para sempre. Se acertar? O conhecimento dos mestres da programação será seu.
+        </p>
+        <p>
+          Você tem coragem de tentar?
+        </p>
+        <button onclick="iniciarJogo()">🎯 Começar Missão</button>
+      </div>
+  
+        <div class="imagem_cofre"><img src="cofre.png" alt="cofre"></div>
+    </div>
+  </div>
+
+  <div id="jogo">
+    <div class="titulo">
+      <h1>✨ Missão Binária: O Cofre do Conhecimento ✨</h1>
+      <p>Encontre as 4 pistas, resolva as charadas, converta para binário e descubra a senha do cofre!</p>
+    </div>
+
+    <div class="game-area">
+      <button class="pista" onclick="revelarPista(0)"> 1 </button>
+      <button class="pista" onclick="revelarPista(1)"> 2 </button>
+      <button class="pista" onclick="revelarPista(2)"> 3 </button>
+      <button class="pista" onclick="revelarPista(3)"> 4 </button>
+    </div>
+
+    <div id="pistas-reveladas"></div>
+
+    <div class="cofre-container">
+      <div class="teclado">
+        <input type="text" id="displaySenha" class="display" oninput="atualizarSenhaManual(this.value)" placeholder="Digite ou use o teclado abaixo">
+        <div class="teclas">
+          <button onclick="digitar('0')">0</button>
+          <button onclick="digitar('1')">1</button>
+          <button onclick="apagar()">⌫</button>
+          <button onclick="verificarSenha()">OK</button>
+        </div>
+      </div>
+    </div>
+
+    <div id="resultado"></div>
+    <img id="cofre" class="cofre-img" src="https://cdn-icons-png.flaticon.com/512/864/864685.png" alt="Cofre" style="display:none;">
+  </div>
+
+  <script src="script.js"></script>
+  <script>
+    function iniciarJogo() {
+      document.getElementById("tela-inicial").style.display = "none";
+      document.getElementById("jogo").style.display = "block";
+    }
+  </script>
+</body>
+</html>

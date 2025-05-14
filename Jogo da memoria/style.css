@@ -1,0 +1,248 @@
+/* Estilo base */
+body {
+  background: linear-gradient(to right, #a1c4fd, #c2e9fb);
+  font-family: 'Comic Sans MS', cursive, sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
+/* Telas do jogo */
+.screen {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+  padding: 2rem;
+  text-align: center;
+}
+
+.hidden {
+  display: none;
+}
+
+/* Tela inicial divertida */
+.mascote {
+  width: 120px;
+  margin-bottom: 1rem;
+}
+
+.speech-bubble {
+  position: relative;
+  background: #fff8dc;
+  border-radius: 15px;
+  padding: 1rem;
+  margin-bottom: 1.5rem;
+  max-width: 350px;
+  font-size: 1rem;
+  box-shadow: 2px 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.speech-bubble::after {
+  content: '';
+  position: absolute;
+  bottom: -20px;
+  left: 40px;
+  border-width: 10px;
+  border-style: solid;
+  border-color: #fff8dc transparent transparent transparent;
+}
+
+/* Formulário inicial */
+.form-group {
+  margin: 1.5rem 0;
+}
+
+.form-group label {
+  font-size: 1.2rem;
+  color: #333;
+}
+
+.form-group input {
+  padding: 0.8rem;
+  font-size: 1.2rem;
+  border-radius: 10px;
+  border: 2px solid #ffa500;
+  box-shadow: 0 0 8px #ffd580;
+  background-color: #fffbe6;
+}
+
+/* Botão principal */
+.btn {
+  padding: 1rem 2rem;
+  font-size: 1.3rem;
+  background-color: #ffcb05;
+  color: #000;
+  border: none;
+  border-radius: 15px;
+  cursor: pointer;
+  transition: transform 0.3s, background-color 0.3s;
+}
+
+.btn:hover {
+  background-color: #ffdd57;
+  transform: scale(1.05);
+}
+
+/* Temporizadores e placar */
+#timer,
+#game-timer,
+#score {
+  font-size: 1.2rem;
+  margin: 0.5rem;
+  padding: 0.5rem 1rem;
+  background-color: rgba(0, 0, 0, 0.1);
+  border-radius: 5px;
+}
+
+/* Tela final */
+#final-score {
+  font-size: 1.5rem;
+  margin: 1.5rem;
+}
+
+#highscores {
+  margin: 2rem 0;
+  width: 100%;
+  max-width: 500px;
+}
+
+.highscore-item {
+  display: flex;
+  justify-content: space-between;
+  padding: 0.8rem;
+  margin: 0.5rem 0;
+  background-color: #e7f3ff;
+  border-radius: 5px;
+}
+
+/* Tabuleiro do jogo */
+#game-board {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+  gap: 15px;
+  justify-content: center;
+  padding: 20px;
+}
+
+.card {
+  background-color: #ff6f61; /* Cor viva */
+  border: 2px solid #d84315;
+  border-radius: 10px;
+  height: 140px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 2rem;
+  font-weight: bold;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  position: relative;
+  perspective: 1000px;
+  transform-style: preserve-3d;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+}
+
+.card::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: linear-gradient(135deg, #186304 0%, #186304 100%);
+  border-radius: 10px;
+  backface-visibility: hidden;
+  transform: rotateY(180deg);
+}
+
+.card.flipped {
+  transform: rotateY(180deg);
+}
+
+.card.matched {
+  background-color: #102bd800;
+  box-shadow: 0 0 15px #28a745;
+}
+
+.card .card-content {
+  transform: rotateY(180deg);
+  backface-visibility: hidden;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.4);
+}
+
+/* Cores fortes para binário e decimal */
+.card[data-binary="true"] .card-content {
+  color: #080808; /* Branco para ótimo contraste */
+}
+
+.card[data-binary="false"] .card-content {
+  color: #ff8c00; /* Preto para contraste com fundo claro */
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+  #game-board {
+    grid-template-columns: repeat(auto-fit, minmax(90px, 1fr));
+    gap: 10px;
+  }
+
+  .card {
+    height: 100px;
+    font-size: 1.4rem;
+  }
+
+  /* Mascote fixo no topo */
+  #mascote {
+    position: fixed;
+    top: 0;           /* Fixa o mascote no topo */
+    left: 50%;        /* Centraliza horizontalmente */
+    transform: translateX(-50%);  /* Ajuste para centralizar de forma exata */
+    z-index: 9999;
+    width: 120px;
+    height: auto;
+  }
+
+  /* Fala do mascote ajustada para o topo */
+  #mascote-helper .speech {
+    top: 130px;       /* Ajusta a posição da fala do mascote abaixo dele */
+    right: 10px;
+  }
+}
+
+/* Mascote e balão de fala */
+#mascote-helper.hidden {
+  display: none;
+}
+
+#mascote-helper .speech {
+  background: #fff8dc;
+  border: 2px solid #ffa500;
+  padding: 1rem;
+  border-radius: 15px;
+  position: absolute;
+  top: 130px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 250px;
+  font-size: 1rem;
+  box-shadow: 2px 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+/* Animação do mascote */
+@keyframes aparecer {
+  from {
+    transform: translateY(100px);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}

@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Conversor de Decimal para Binário</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="container">
+    <h1>🔢 Decimal para Binário!</h1>
+
+    <p style="margin-bottom: 15px; color: var(--text); font-size: 1.1rem;">
+      <strong>Você sabia?</strong><br>
+      Um número <strong>decimal</strong> é como contamos normalmente (0, 1, 2, 3...).<br>
+      Um número <strong>binário</strong> só usa os números <strong>0</strong> e <strong>1</strong>.<br><br>
+      Vamos aprender a transformar um número decimal em binário, passo a passo!
+    </p>
+
+    <div class="input-area">
+      <label for="decimalInput">Digite um número inteiro para começar:</label>
+      <input type="number" id="decimalInput" placeholder="Por exemplo: 13" />
+      <button id="convertBtn">Converter</button>
+    </div>
+
+    <div class="steps-explanation" style="margin-bottom: 20px; background-color: #fff8dc; padding: 10px; border-radius: 10px;">
+      <h3 style="color: var(--accent); margin-bottom: 10px;">📘 Como funciona?</h3>
+      <ul style="text-align: left; color: #333; padding-left: 20px;">
+        <li>Vamos dividir o número por 2 várias vezes.</li>
+        <li>Vamos guardar o resto (0 ou 1) de cada divisão.</li>
+        <li>Depois, vamos juntar os restos de trás para frente.</li>
+      </ul>
+      <p style="margin-top: 10px;">🎉 Pronto! Isso é o número em binário!</p>
+    </div>
+
+    <div id="steps" class="steps"></div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>

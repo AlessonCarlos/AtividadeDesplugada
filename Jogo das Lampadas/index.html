@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jogo Binário</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Jogo Binário</h1>
+        <p>Acenda as lâmpadas para formar o número binário correto!</p>
+        
+        <div id="lanternas">
+            <div class="lanterna" id="lanterna8" onclick="toggleLamp(8)"></div>
+            <div class="lanterna" id="lanterna4" onclick="toggleLamp(4)"></div>
+            <div class="lanterna" id="lanterna2" onclick="toggleLamp(2)"></div>
+            <div class="lanterna" id="lanterna1" onclick="toggleLamp(1)"></div>
+        </div>
+
+        <div class="display">
+            <p id="numeroDisplay">Número: </p>
+        </div>
+
+        <div class="info">
+            <p id="timer">Tempo: 60</p>
+            <p id="placar">Placar: 0</p>
+        </div>
+
+        <button onclick="iniciarJogo()">Iniciar Jogo</button>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

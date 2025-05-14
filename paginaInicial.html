@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>O Sistema Binário: Como os Computadores Usam 0s e 1s</title>
+    <link rel="stylesheet" href="estilo.css">
+</head>
+<body>
+    <header class="header_principal">
+        <header class="header_secundario">
+        <h1>O Sistema Binário: Como os Computadores Trabalham com 0s e 1s</h1>
+        <nav class="container_lista">
+            <ul class="lista">
+                <li><a href="Calculadora/index.html">Calculadora</a></li>
+                
+                <li><a href="abre o cofre/index.html">Desafio do cofre</a></li>
+                
+                <li><a href="Jogo da memoria/index.html">Jogo da Memoria</a></li>
+                
+                <li><a href="Jogo das Lampadas/index.html">Jogo das Lampadas</a></li>
+               
+            </ul>
+        </nav>
+        </header>
+    </header>
+
+    <hr>
+
+    <section class="intro">
+        <h2>Por que os Computadores Usam Apenas 0 e 1?</h2>
+        <p>Nosso mundo é cheio de cores e tons, e sabemos que cada cor tem uma variação única. Isso acontece porque usamos informações analógicas, que podem ter muitas variações. Já os computadores trabalham de uma forma diferente: eles lidam com informações digitais, que são muito mais simples. Eles usam apenas dois números: <strong>0</strong> e <strong>1</strong>, e é disso que vamos falar hoje!</p>
+        <p>Então, por que os computadores usam apenas 0 e 1? A resposta é simples: o sistema binário é mais eficiente. Quanto menos números os computadores precisarem usar, mais rápido e confiável eles podem processar as informações. Então, os computadores representam tudo usando apenas 0s e 1s, facilitando o processamento e a comunicação de dados.</p>
+    </section>
+
+    <hr>
+
+    <section class="binario">
+        <h2>O Sistema Binário</h2>
+        <p>O sistema binário funciona de maneira semelhante ao sistema decimal, mas a grande diferença é que ele usa potências de 2, em vez de 10. Ou seja, cada posição de um número binário representa uma potência de 2. Se você olhar para um número binário, verá que cada <strong>1</strong> ou <strong>0</strong> é multiplicado por uma potência de 2, e essas potências aumentam conforme você move para a esquerda.</p>
+
+        <p>Abaixo estão as potências de 2:</p>
+        <ul>
+            <li>2⁰ = 1</li>
+            <li>2¹ = 2</li>
+            <li>2² = 4</li>
+            <li>2³ = 8</li>
+            <li>2⁴ = 16</li>
+            <li>2⁵ = 32</li>
+            <li>2⁶ = 64</li>
+            <li>2⁷ = 128</li>
+            <li>2⁸ = 256 (mas este número é maior que o que estamos procurando, então não usaremos)</li>
+        </ul>
+
+        <h1>Agora vamos aprender a converter um número decimal em binário.</h1>
+
+        <h3>Transformando o número 202 em binário:</h3>
+        <p><strong>Passo 1:</strong> Encontrar a maior potência de 2 menor ou igual a 202. A maior potência de 2 que é menor que 202 é 2⁷ = 128.</p>
+        <p><strong>Passo 2:</strong> Subtrair 128 de 202. Isso nos dá 202 - 128 = 74.</p>
+        <p><strong>Passo 3:</strong> Repetir o processo com 74. A maior potência de 2 menor que 74 é 2⁶ = 64. Subtraímos 64 de 74, o que nos dá 74 - 64 = 10.</p>
+        <p><strong>Passo 4:</strong> Para o número 10, a maior potência de 2 é 2³ = 8. Subtraímos 8 de 10, o que nos dá 10 - 8 = 2.</p>
+        <p><strong>Passo 5:</strong> Para o número 2, a maior potência de 2 é 2¹ = 2. Subtraímos 2 de 2, o que nos dá 2 - 2 = 0. Não temos mais nada a subtrair!</p>
+
+        <h3>Escrevendo o número binário:</h3>
+        <p>Agora, vamos escrever o número binário. Para cada potência de 2 que usamos, colocamos um <strong>1</strong> na posição correspondente, e onde não usamos, colocamos um <strong>0</strong>.</p>
+        <ul>
+            <li>Usamos 2⁷ = 128, então colocamos <strong>1</strong> na posição de 2⁷.</li>
+            <li>Usamos 2⁶ = 64, então colocamos <strong>1</strong> na posição de 2⁶.</li>
+            <li>Não usamos 2⁵ = 32, então colocamos <strong>0</strong> na posição de 2⁵.</li>
+            <li>Não usamos 2⁴ = 16, então colocamos <strong>0</strong> na posição de 2⁴.</li>
+            <li>Usamos 2³ = 8, então colocamos <strong>1</strong> na posição de 2³.</li>
+            <li>Não usamos 2² = 4, então colocamos <strong>0</strong> na posição de 2².</li>
+            <li>Usamos 2¹ = 2, então colocamos <strong>1</strong> na posição de 2¹.</li>
+            <li>Não usamos 2⁰ = 1, então colocamos <strong>0</strong> na posição de 2⁰.</li>
+        </ul>
+
+        <h3>Resultado final:</h3>
+        <p>O número 202 em binário é: <strong>11001010</strong></p>
+    </section>
+
+    <hr>
+
+    <section class="passos">
+        <h2>Resumo - Como Converter um Número Decimal em Binário</h2>
+        <ol>
+            <li>Encontre a maior potência de 2 que seja menor ou igual ao número.</li>
+            <li>Subtraia essa potência do número.</li>
+            <li>Repita o processo com o número restante até chegar a 0.</li>
+            <li>Escreva o número binário, colocando 1 nas potências de 2 que você usou e 0 nas que não usou.</li>
+        </ol>
+        <p>Agora que você conhece o processo, pode converter qualquer número decimal em binário! Lembre-se: tudo o que um computador faz é representado de forma binária. Eles apenas combinam muitos 0s e 1s para criar as informações e dados que usamos no nosso dia a dia.</p>
+    </section>
+    
+    <hr>
+    
+    <footer>
+        <p>Exploração divertida do sistema binário!</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
